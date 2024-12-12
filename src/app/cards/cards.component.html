@@ -1,0 +1,51 @@
+<h1 class="container p-2">CARDS</h1> <hr>
+<div class="container mt-2 p-5 col-12 offset-2">
+<div class="row d-flex">
+<div  *ngFor="let movie of movieArray; let i=index;" class="mb-12" >
+    <div class="card">
+        <figure class="moviecard">
+            <img src="{{movieArray[i].image}}"
+                alt="{{movieArray[i].title}}" 
+                title="{{movieArray[i].title}}">
+                <figcaption>
+                    <div class="movietitle">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h6 class="mb-0">
+                                {{movieArray[i].description}}
+                                </h6>
+                            </div>
+                            <!-- <div class="col-md-2 align-self-center">
+                                <span class="{setRatingBg(movieArray[i].rating)} p-2 rating">
+                                {{(movieArray[i].rating)}}
+                                </span>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="movieOverview p-3">
+                        <h2 class="mb-0">
+                            {{movieArray[i].category}}
+                        </h2>
+                        <p>
+                             {{movieArray[i].price}}
+    
+                        </p>
+                    </div>
+                </figcaption>
+        </figure>
+    </div>
+    <!-- <script>
+function setRatingBg(rating){
+  if(rating > 7.5){
+      return 'bg-success'
+  } else if(rating <= 7.5 && rating > 5){
+      return 'bg-warning'
+  }else{
+      return 'bg-danger'
+  }
+  
+}
+    </script> -->
+
+</div>
+</div>
